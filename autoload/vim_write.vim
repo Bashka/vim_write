@@ -1,5 +1,5 @@
 " Date Create: 2015-02-23 22:48:37
-" Last Change: 2015-02-23 23:58:59
+" Last Change: 2015-02-24 16:57:11
 " Author: Artur Sh. Mamedbekov (Artur-Mamedbekov@yandex.ru)
 " License: GNU GPL v3 (http://www.gnu.org/copyleft/gpl.html)
 
@@ -35,7 +35,7 @@ endfunction " }}}
 " Метод выполняет автоматическое сохранение буфера в случае, если он был изменен и не являлся временным.
 "" }}}
 function! vim_write#_autowrite() " {{{
-  if g:vim_write#.aw == 1 && &l:mod == 1 && &l:buftype != 'nofile'
+  if g:vim_write#.aw == 1 && &l:mod == 1 && &l:buftype != 'nofile' && bufname('%') != ''
     if type(g:vim_write#.awTypes) == 1 || (type(g:vim_write#.awTypes) == 3 && index(g:vim_write#.awTypes, &l:filetype) != -1)
       call vim_write#_writePre()
       w
