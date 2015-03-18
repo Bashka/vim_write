@@ -1,12 +1,12 @@
 " Date Create: 2015-02-23 22:45:56
-" Last Change: 2015-02-23 23:51:26
+" Last Change: 2015-03-18 20:50:51
 " Author: Artur Sh. Mamedbekov (Artur-Mamedbekov@yandex.ru)
 " License: GNU GPL v3 (http://www.gnu.org/copyleft/gpl.html)
 
 let s:Plugin = vim_lib#sys#Plugin#
 let s:System = vim_lib#sys#System#.new()
 
-let s:p = s:Plugin.new('vim_write', '1', {'plugins': ['vim_prj']})
+let s:p = s:Plugin.new('vim_write', '1')
 
 " Опции. {{{
 "" {{{
